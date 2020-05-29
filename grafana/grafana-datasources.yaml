@@ -26,5 +26,5 @@ data:
             httpMethod: GET
         name: prometheus
         type: prometheus
-        url: http://prometheus
+        url: http://prometheus:9090
         version: 1

@@ -1,0 +1,10 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: pod-monitor
+spec:
+namespaceSelector:
+  podMetricsEndpoints:
+    - interval: 15s
+      scrapeTimeout: 30s
+      port: metrics
