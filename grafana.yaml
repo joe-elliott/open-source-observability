@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grafana
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grafana
+  template:
+    metadata:
+      labels:
+        app: grafana
+    spec:
+      containers:
+      - name: grafana
+        image: "grafana/grafana:7.0.1"
+        env:
+        - name: GF_INSTALL_PLUGINS
+        - name: GF_PATHS_CONFIG
+          value: /etc/grafana-config/grafana.ini
+        volumeMounts:
+        - mountPath: /etc/grafana-config
+          name: grafana-config
+        - mountPath: /etc/grafana/provisioning/dashboards
+          name: grafana-dashboard-provisioning
+        - mountPath: /etc/grafana/provisioning/datasources
+          name: grafana-datasources
+      volumes:
+      - configMap:
+          name: grafana-config
+        name: grafana-config
+      - configMap:
+          name: grafana-dashboard-provisioning
+        name: grafana-dashboard-provisioning
+      - configMap:
+          name: grafana-datasources
+        name: grafana-datasources
