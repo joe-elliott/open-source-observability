@@ -1,5 +1,5 @@
 # k3d
-make thing
+k3d create cluster --publish 3000:80
 
 # loki
 ```
