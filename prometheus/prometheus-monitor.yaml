@@ -1,10 +1,14 @@
 apiVersion: monitoring.coreos.com/v1
 kind: PodMonitor
 metadata:
-  name: pod-monitor
+  name: loki-monitor
+  labels:
+    monitor: 'true'
 spec:
-namespaceSelector:
+  selector:
+    matchLabels:
+      app: loki
   podMetricsEndpoints:
     - interval: 15s
-      scrapeTimeout: 30s
-      port: metrics
+      scrapeTimeout: 10s
+      port: http-metrics
