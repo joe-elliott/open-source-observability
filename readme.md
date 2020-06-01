@@ -19,6 +19,3 @@ helm upgrade --install loki loki/loki-stack
 ```
 kc create -f ./prometheus
 ```
-
-# todo
-- static dashboard provisioning

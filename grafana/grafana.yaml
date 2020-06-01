@@ -15,7 +15,7 @@ spec:
       containers:
       - name: grafana
         image: "grafana/grafana:7.0.1"
-        env:
+        env:                            # https://grafana.com/docs/grafana/latest/installation/configuration/
         - name: GF_INSTALL_PLUGINS
         - name: GF_PATHS_CONFIG
           value: /etc/grafana-config/grafana.ini
@@ -26,6 +26,8 @@ spec:
           name: grafana-dashboard-provisioning
         - mountPath: /etc/grafana/provisioning/datasources
           name: grafana-datasources
+        - mountPath: /grafana/dashboards
+          name: dashboards
       volumes:
       - configMap:
           name: grafana-config
@@ -36,6 +38,9 @@ spec:
       - configMap:
           name: grafana-datasources
         name: grafana-datasources
+      - configMap:
+          name: grafana-dashboards
+        name: dashboards
 ---
 apiVersion: v1
 kind: Service

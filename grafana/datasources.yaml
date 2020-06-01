@@ -28,3 +28,12 @@ data:
         type: prometheus
         url: http://prometheus:9090
         version: 1
+  testdata.yaml: |
+    apiVersion: 1
+    datasources:
+      - access: proxy
+        editable: false
+        isDefault: false
+        name: testdata
+        type: testdata
+        version: 2
