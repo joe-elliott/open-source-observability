@@ -1,0 +1,61 @@
+- Joe Elliott.  Does things
+  - 30+ years in Louisville
+  - QSR, YUM, Taught for 5 years
+  - Doing remote work for Grafana
+  - Biking
+
+- Observability
+  - The ability to have insight and awareness of the applications you manage
+  - Google's SRE Handbook - SLAs, SLOs, SLIs, risk tolerance
+  - Three pillars
+    - Logs, Metrics, Tracing
+  - Open Source 
+    - Grafana maintains 
+
+- Kubernetes
+  - intermediate
+  - k3d - way to run locally
+    - kind, minikube
+  - services, volume mounts, pods, deployments
+  - different methods of deploying and configuring applications
+
+- Grafana!
+  - visualization layer - big tent
+    - influxdb, graphite, elastic, mysql
+  - 7.0!
+    - https://grafana.com/about/events/grafanacon/2020/?isource=hp#schedule
+    - redesigned UI/config panel
+    - angular -> react
+  - static provisioning
+    - can use mysql or postgres?
+  - Dashboards, Explore, Data Sources, Alerting, Reports
+
+- Logs (Loki)
+
+- Metrics (Prometheus)
+  - Operator
+    - One process to manage
+    - Advanced k8s features.  Most commonly CRDs
+    - Ingress Controller/Controller Manager
+  - Prometheus
+    - borg/borgmon => k8s/prometheus
+    - Pull/Scrape Model
+      - Push vs. Pull
+    - Single Binary, Not Horizontally Scalable
+      - 128 GB
+    - promql
+      - counter, gauges, histograms, summaries
+      - rate(counter)
+        - rate(loki_distributor_bytes_received_total[??])
+      - histogram
+        - histogram_quantile(.99, sum(rate(loki_request_duration_seconds_bucket{route="/logproto.Pusher/Push"}[5m])) by (le))
+      - info metrics
+        - loki_build_info
+    - Wide Support
+      - node_exporter, wmi_exporter
+      - direct support: envoy, certmanager
+      - Rich service discovery (ec2, consul, k8s)
+      - Custom Metrics
+    - AlertManager/Rule
+
+- Grafana Integrations
