@@ -57,5 +57,6 @@
       - Rich service discovery (ec2, consul, k8s)
       - Custom Metrics
     - AlertManager/Rule
+    - Show Config pages?
 
 - Grafana Integrations
