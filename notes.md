@@ -31,6 +31,24 @@
   - Dashboards, Explore, Data Sources, Alerting, Reports
 
 - Logs (Loki)
+  - helm install
+    - helm list
+  - Idea
+    - Index tags only
+      - Distributed grep 40GB/s
+    - Prometheus-like Language
+    - Primary Player : Elasticsearch
+  - Ingest: Promtail, Fluentd, Fluentbit, Docker driver
+  - LogQL
+    - Label Selection (operators, =, !=, =~)
+    - Grep
+    - Extensions
+      - Upcoming 
+  - Demo stuff
+    - Logs Panels embedded in Dashboards (Loki Operational)
+    - Derived Fields ()
+    - Kube Diff Logger
+      - https://ops.grafana.net/d/N8ig05QZk/cortexdeploy?orgId=1&refresh=10s&from=now-12h&to=now&var-datasource=ops-cortex&var-cluster=us-central1&var-namespace=prod
 
 - Metrics (Prometheus)
   - Operator
