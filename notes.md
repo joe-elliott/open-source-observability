@@ -33,6 +33,8 @@
     - Prometheus-like Language
     - Primary Player : Elasticsearch
   - Ingest: Promtail, Fluentd, Fluentbit, Docker driver
+  - Promtail:
+    - BadWords, Label Extraction (json, regex)
   - LogQL
     - Label Selection (operators, =, !=, =~)
     - Grep
