@@ -1,9 +1,3 @@
-- Joe Elliott.  Does things
-  - 30+ years in Louisville
-  - QSR, YUM, Taught for 5 years
-  - Doing remote work for Grafana
-  - Biking
-
 - Observability
   - The ability to have insight and awareness of the applications you manage
   - Google's SRE Handbook - SLAs, SLOs, SLIs, risk tolerance
