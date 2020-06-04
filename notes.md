@@ -42,7 +42,6 @@
     - Logs Panels embedded in Dashboards (Loki Operational)
     - Derived Fields ()
     - Kube Diff Logger
-      - https://ops.grafana.net/d/N8ig05QZk/cortexdeploy?orgId=1&refresh=10s&from=now-12h&to=now&var-datasource=ops-cortex&var-cluster=us-central1&var-namespace=prod
 
 - Metrics (Prometheus)
   - Operator
