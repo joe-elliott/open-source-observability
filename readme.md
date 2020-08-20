@@ -15,6 +15,8 @@ helm repo update
 helm upgrade --install loki loki/loki-stack
 ```
 
+`kc run kube-diff-logger --image=grafana/kubernetes-diff-logger`
+
 # prometheus
 ```
 kc create -f ./prometheus
