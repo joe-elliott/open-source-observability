@@ -15,7 +15,10 @@ helm repo update
 helm upgrade --install loki loki/loki-stack
 ```
 
-`kc run kube-diff-logger --image=grafana/kubernetes-diff-logger`
+```
+kc create -f ./diff-logger
+```
+https://grafana.com/blog/2019/12/09/how-to-do-automatic-annotations-with-grafana-and-loki/
 
 # prometheus
 ```
